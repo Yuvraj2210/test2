@@ -1,0 +1,41 @@
+{/*for commentin in react use this multiline comment*/}
+
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id = "root"></div>
+<script type = "text/babel">
+    function Product(xyz){
+        return(
+            
+            <div class = "col-xl-3">
+            <img src={xyz.path} alt="" class="img-fluid"/>
+            <h2>{xyz.name}</h2>
+            <p>{xyz.price}</p>
+            <p><button>Add to cart</button></p>
+            </div>
+        )
+    }
+    var record = (
+        <div class="container">
+        <div class="row">
+            <Product name = "Product1" price ="2000" path="https://rukminim1.flixcart.com/image/312/312/kt1u3rk0/tablet/t/j/t/rmp2103-realme-original-imag6h83yvtku7ec.jpeg?q=70"></Product>
+            <Product name = "Product2" price ="3000" path="https://rukminim1.flixcart.com/image/312/312/ky7lci80/tablet/e/d/m/sm-x205nzaeinu-samsung-original-imagahrshg78gwvb.jpeg?q=70"></Product>
+            <Product name = "Product3" price ="4000" path = 
+            "https://rukminim1.flixcart.com/image/312/312/l4hcx3k0/tablet/z/x/l/sm-p613nzaainu-samsung-original-imagfdadcth8xghj.jpeg?q=70"></Product>
+            <Product name = "Product4" price ="5000" path = "https://rukminim1.flixcart.com/image/312/312/ktop5e80/tablet/x/9/o/mk2k3hn-a-apple-original-imag6yy7xjjugz4w.jpeg?q=70"/>
+            
+
+            </div>
+        </div>
+        
+    )
+    ReactDOM.render(record,document.getElementById("root"))
+
+</script>
+
+

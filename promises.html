@@ -1,0 +1,22 @@
+<!-- promise is intially in pending state -->
+<!-- promise has to be resolved or rejected -->
+<!-- either promise is resolved or rejected -->
+<script>
+    var record = new Promise((res,rej)=>{
+        console.log(typeof res,typeof rej);
+        // res("Task is completed")
+        rej("Task Failure")
+    })
+    console.log(record);
+     // then is handler for resolved value
+    record.then((value)=>{
+        console.log(value);
+    }).catch((error)=>{
+         // then is handler for rejected value
+        console.log(error);
+    }).finally(()=>{
+         // then is handler for resolved and rejected value
+        console.log("promise completed");
+    })
+   
+</script>
